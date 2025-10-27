@@ -1,0 +1,538 @@
+/* body */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #121212;
+  color: #fff;
+  font-family: Plus Jakarta Sans;
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100vh;
+  background-color: #1e1e1e; /* dark theme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  overflow-y: auto; /* enables vertical scroll */
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for a clean look */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
+
+/* Icon style */
+.sidebar i {
+  color: #bbb;
+  font-size: 18px; /* small size */
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.sidebar i:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dragon logo */
+.sidebar .logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* --------------TOP NAVBAR------------ */
+.navbar {
+  background-color: #1e1e1e !important;
+  height: 50px;
+  padding: 0 15px;
+}
+
+/* Offset for sidebar */
+.navbar.fixed-top {
+  left: 50px;
+  width: calc(100vw - 50px);
+}
+
+/* Search bar */
+.search-bar {
+  background-color: #2a2a2a;
+  border: none;
+  color: #ccc;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: 200px;
+}
+.search-bar::placeholder {
+  color: #888;
+}
+
+/* Icons */
+.navbar-icons i {
+  color: #bbb;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navbar-icons i:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Profile */
+.profile-tab {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+.profile-tab img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.profile-tab .info {
+  line-height: 1;
+  font-size: 13px;
+}
+.profile-tab .info .name {
+  font-weight: 600;
+}
+.profile-tab .info .role {
+  font-size: 11px;
+  color: #999;
+}
+
+/* Collapse background for mobile */
+.navbar-collapse {
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  padding: 10px;
+}
+
+
+/* -----------------------Profile/peronal bar------------------ */
+
+/* ------------ personal bar----------------- */
+.personal-bar {
+  /* position: absolute;
+  top: 79.5px;
+  left: 76px; */
+  
+  width: 380px;
+  padding-bottom: 30px;
+  background-color: #1A1B26;
+  border-bottom-right-radius: 8px;
+  color: #fff;
+}
+
+.profile-img {
+  width: 16.75rem;
+  height: 16.75rem;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #2f2f3a;
+}
+/* quick action */
+.quick-action{
+  font-size: 14px;
+  line-height: 150%;
+  background-color: #1376ff;
+  letter-spacing: 0;
+}
+
+/* Button styles */
+.profile-section .btn-outline-light {
+  border-color: #21222d ;
+  background-color: #21222d;
+  color: #1376ff;
+  transition: 0.3s;
+  width: 40px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.profile-section .btn-outline-light:hover {
+  background-color: #2f2f3a;
+  color: #fff;
+}
+
+/* ----------------personal info-------------- */
+.personal-info-section {
+  width: 90%;
+  height: fit-content;
+  background-color: transparent;
+  margin-left: 20px;
+  opacity: 1;
+  gap: 12px;
+}
+
+.personal-info-section .label-text {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.personal-info-section .value-text {
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-list i {
+  color: #1376ff; 
+}
+span.label-text, span.value-text{
+  width: 45%;
+  font-weight: 500;
+  padding: 20px 12px;
+  gap: 8px;
+  border-bottom: 1px solid #444;
+  /* width: 158px; */
+  height: 51px; 
+}
+span.value-text:hover{
+  cursor: pointer;
+}
+.info-list > div:nth-last-child(-n + 3) .value-text {
+  color: #1376ff;
+}
+
+
+/* ---------------Tag section ----------------- */
+.tags-section {
+  margin-left: 20px;
+  opacity: 1;
+  width: 90%;
+  height: fit-content;
+}
+
+.tags-section .tag-btn {
+  background-color: #2b2c3b;
+  color: #bbb;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  height: 25px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.tags-section .tag-btn:hover {
+  background-color: #1376ff; /* Bootstrap blue */
+}
+
+.tag-btn i {
+  color: #1376ff;
+}
+
+/* ---------------main------------- */
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px; /* spacing between personal-bar and box-2 */
+  flex-wrap: wrap; /* allow wrap on smaller screens */
+  width: 100%;
+  margin-top: 50px;
+}
+
+.personal-bar {
+  background-color: #1A1B26;
+  width: 30%;  /* 30% on large screens */
+  min-width: 300px; /* optional, prevent it from being too small */
+}
+
+.box-2 {
+  
+  width: 68%;  /* 60% on large screens */
+  min-width: 300px; /* optional */
+}
+
+/* box2 section 1: tabs */
+.box2-section1 {
+  height: 68px;
+  width: 100%;
+  background-color: #1A1B26;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  border-color: #3A3A45;
+  gap: 10px;
+  overflow-x: auto; /* allow scrolling if too many tabs on mobile */
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #444 transparent;  /* thumb + track */
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  height: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab-btn i {
+  font-size: 1rem;
+}
+
+.tab-btn:hover {
+  color: #1376ff;
+}
+
+.tab-btn.active {
+  color: #1376ff;
+  text-decoration: underline;
+}
+
+/* box 2 section 1: stats cards */
+.stats-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px;
+  white-space: nowrap;
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #444 transparent;  /* thumb + track */
+}
+
+.stats-cards::-webkit-scrollbar {
+  height: 6px;                  /* scroll bar height */
+  background: transparent; 
+}
+
+.stats-cards::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
+
+.card-stat {
+  flex: 0 0 220px;              /* fixed width for each card */
+  background: linear-gradient(135deg, #f5f5f5, #e0e0ff);
+  color: #000;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #3A3A45;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #555;
+}
+
+.card-number {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.card-footer {
+  font-size: 11px;
+  color: #666;
+}
+
+.card-icon {
+  font-size: 22px;
+  color: #1376ff;
+}
+
+
+/* Box 2, Section 3: Payments */
+.payment-main{
+ border: 1px solid #333;
+
+}
+
+/* payment */
+.payments{
+
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1A1B26;
+}
+.btn-payment{
+  background-color: #1376ff;
+  font-size: 0.85rem;
+  color: #fff;
+}
+.btn-payment:hover{
+  background-color: #1376ff;
+}
+
+/*  payment tabs */
+.payment-tabs{
+  padding: 10px;
+  background-color: #1A1B26;
+
+}
+.payment-tabs-btn {
+  width: 300px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #21222D;
+  border: 1px solid #444;
+}
+
+.tab-btn {
+  flex: 1;
+  height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ccc;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-btn:hover {
+  background-color: #444;
+  color: inherit;
+}
+
+.tab-btn.active {
+  background-color: #444;
+  color: #1376ff;
+  font-weight: 600;
+}
+
+
+/* payment/invoice table */
+.invoice-table {
+  width: 100%;
+  background-color: #1A1B26;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: inherit;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: #ccc !important;
+}
+
+thead {
+  background-color: #21222D;
+  color: #ccc !important;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: inherit;
+  border-bottom: 1px solid #444;
+  color: #ccc !important;
+
+}
+
+tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+tbody td {
+  padding: 15px;
+  font-size: 0.85rem;
+  color: inherit;
+  background-color: #1A1B26; 
+  color: #ccc !important;
+}
+
+td button{
+  border: none !important;
+  color: #1376ff !important;
+}
+td button:hover{
+  background-color: #333 !important;
+}
+
+tfoot td {
+  border-top: 1px solid #444;
+  background-color: #1A1B26;
+  padding: 15px;
+  color: #ccc !important;
+  font-weight: 500;
+  text-align: right;
+  font-size: 0.85rem;
+}
+tfoot td span{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+/* Responsive for tablets / small screens */
+@media (max-width: 992px) { 
+  .personal-bar,
+  .box-2 {
+    margin-left: 1.8rem;
+    width: 90%; /* both take full width minus padding */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .profile-tab .info {
+    display: block;
+  }
+}
+
+@media (max-width: 500px){
+  .label-text, .value-text{
+    padding: 10px !important;
+    font-size: 0.75rem !important;
+  }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Profile Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Styles.css -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="sidebar">
+      <i class="fa-solid fa-dragon logo"></i>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-bookmark"></i>
+      <i class="fa-solid fa-table-cells-large"></i>
+      <i class="bi bi-person-add"></i>
+      <i class="bi bi-people-fill"></i>
+      <i class="bi bi-arrows-fullscreen"></i>
+      <i class="fa-solid fa-calendar-days"></i>
+      <i class="fa-solid fa-tag"></i>
+      <i class="fa-solid fa-note-sticky"></i>
+      <i class="fa-solid fa-ranking-star"></i>
+      <i class="fa-solid fa-comment-dots"></i>
+      <i class="fa-solid fa-square-poll-vertical"></i>
+      <i class="fa-solid fa-gear"></i>
+      <i class="fa-regular fa-chart-bar"></i>
+    </nav>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <!-- Search -->
+        <form class="d-flex align-items-center me-2">
+          <input
+            class="form-control search-bar"
+            type="search"
+            placeholder="Search contact"
+            aria-label="Search"
+          />
+        </form>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler border-0 text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Collapse -->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarMenu"
+        >
+          <!-- Icons -->
+          <div class="navbar-icons mx-auto text-center mt-2 mt-lg-0">
+            <i class="bi bi-person-add"></i>
+            <i class="bi bi-people-fill"></i>
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-solid fa-calendar-days"></i>
+            <i class="fa-regular fa-handshake"></i>
+            <i class="fa-solid fa-comment-dots"></i>
+            <i class="fa-regular fa-clipboard"></i>
+            <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-regular fa-clock"></i>
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+          </div>
+
+          <!-- Profile (stays visible and full in both desktop and mobile collapse) -->
+          <div class="profile-tab mt-2 mt-lg-0 ms-lg-auto">
+            <img src="./images/person.jpg" alt="Profile" />
+            <div class="info">
+              <div class="name">Savannah Nguyen</div>
+              <div class="role">Admin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="d-flex flex-wrap justify-content-center p-3">
+      <!-- Profile / Personal Bar -->
+      <div class="personal-bar p-3 mb-3">
+        <!-- Profile Section -->
+        <div class="profile-section text-center p-3">
+          <!-- Profile Picture -->
+          <img
+            src="./images/person.jpg"
+            alt="Profile Picture"
+            class="profile-img mb-3"
+          />
+
+          <!-- Name -->
+          <h5 class="text-white mb-3">Savannah Nguyen</h5>
+
+          <!-- Quick Action Button -->
+          <button
+            class="btn btn-primary w-100 mb-3 d-flex align-items-center justify-content-center gap-2 quick-action"
+          >
+            <i class="bi bi-hand-index-thumb"></i>
+            Quick Action
+            <i class="bi bi-chevron-down"></i>
+          </button>
+
+          <!-- Four Buttons (2 per row) -->
+          <div class="d-grid gap-2">
+            <div class="d-flex gap-2">
+              <button
+                class="btn btn-outline-light flex-fill d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="fa-solid fa-cart-plus"></i> Add Credit
+              </button>
+              <button
+                class="btn btn-outline-light flex-fill d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="fa-solid fa-person-running"></i> Create Workout
+              </button>
+            </div>
+            <div class="d-flex gap-2">
+              <button
+                class="btn btn-outline-light flex-fill d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="fa-solid fa-heart-pulse"></i> Show Fitness
+              </button>
+              <button
+                class="btn btn-outline-light flex-fill d-flex align-items-center justify-content-center gap-2"
+              >
+                <i class="bi bi-printer"></i> Bar Code Print
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="personal-info-section mt-4 pb-4">
+          <!-- Title Frame -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="m-0 text-white d-flex align-items-center gap-2">
+              <i class="bi bi-caret-down-fill"></i> Personal Info
+            </h6>
+            <button class="btn btn-sm btn-outline-light border-0">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          </div>
+
+          <!-- Info List -->
+          <div class="info-list">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Pronunciation</span>
+              <span class="value-text"
+                ><i class="fa-solid fa-volume-high"></i
+              ></span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Using Student App</span>
+              <span class="value-text"><i class="bi bi-phone"></i> No</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Mobile Phone</span>
+              <span class="value-text"
+                ><i class="bi bi-phone"></i> (473) 555-0927</span
+              >
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Mobile Phone #2</span>
+              <span class="value-text"
+                ><i class="bi bi-plus-circle-fill"></i> Add new phone</span
+              >
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Email Address</span>
+              <span class="value-text"
+                ><i class="fa-regular fa-envelope"></i> izzy@gmail.com</span
+              >
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="label-text">Email Address #2</span>
+              <span class="value-text"
+                ><i class="bi bi-plus-circle-fill"></i> Add new email</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tags Section -->
+        <div class="tags-section">
+          <!-- Title Frame -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="m-0 text-white d-flex align-items-center gap-2">
+              <i class="bi bi-caret-down-fill"></i> Tags
+            </h6>
+            <button class="btn btn-sm btn-outline-light border-0">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <!-- Tags Buttons -->
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn tag-btn">
+              <i class="bi bi-tag"></i> benefits-focus
+            </button>
+            <button class="btn tag-btn">
+              <i class="bi bi-tag"></i> attended-appointment
+            </button>
+            <button class="btn tag-btn">
+              <i class="bi bi-tag"></i> bought-uniform
+            </button>
+            <button class="btn tag-btn">
+              <i class="bi bi-tag"></i> interested-in-kungfu
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="box-2 mb-3">
+        <!-- Box 2 Section 1: Tabs -->
+        <div class="box2-section1 d-flex align-items-center px-3">
+          <button class="tab-btn active">
+            <i class="fa-solid fa-address-card"></i> Profile
+          </button>
+          <button class="tab-btn">
+            <i class="fa-regular fa-clipboard"></i> Notes
+          </button>
+          <button class="tab-btn">
+            <i class="fa-regular fa-comments"></i> Communications
+          </button>
+          <button class="tab-btn">
+            <i class="fa-solid fa-person-running"></i> Workouts
+          </button>
+          <button class="tab-btn">
+            <i class="fa-solid fa-calendar-days"></i> Attendance
+          </button>
+          <button class="tab-btn">
+            <i class="bi bi-clipboard-data"></i> Invoice
+          </button>
+          <button class="tab-btn">
+            <i class="fa-solid fa-ranking-star"></i> Ranks
+          </button>
+        </div>
+
+        <!-- Box 2 Section 2: Stats Cards -->
+        <div class="stats-cards">
+          <div class="card-stat">
+            <div class="card-content">
+              <div class="card-title">Email Sent</div>
+              <div class="card-subtitle">Last 60 days</div>
+              <div class="card-number">6</div>
+              <div class="card-footer">Opened: 1 | Bounce: 1</div>
+            </div>
+            <div class="card-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-content">
+              <div class="card-title">Appointment Booked</div>
+              <div class="card-subtitle">&nbsp;</div>
+              <div class="card-number">0</div>
+              <div class="card-footer">Showed: 0 | No-show: 0</div>
+            </div>
+            <div class="card-icon">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-content">
+              <div class="card-title">Total Attendance</div>
+              <div class="card-subtitle">&nbsp;</div>
+              <div class="card-number">81</div>
+              <div class="card-footer">Last 7 Days: 3 | Last 30 Days: 21</div>
+            </div>
+            <div class="card-icon">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-content">
+              <div class="card-title">Tasks</div>
+              <div class="card-subtitle">&nbsp;</div>
+              <div class="card-number">3</div>
+              <div class="card-footer">Completed: 3 | Overdue: 3</div>
+            </div>
+            <div class="card-icon">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+          </div>
+
+          <div class="card-stat">
+            <div class="card-content">
+              <div class="card-title">Invoices</div>
+              <div class="card-subtitle">&nbsp;</div>
+              <div class="card-number">3</div>
+              <div class="card-footer">Completed: 3 | Overdue: 3</div>
+            </div>
+            <div class="card-icon">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2 Section 3: Payments -->
+        <div class="payment-main mt-3">
+          <!-- payment -->
+          <div class="payments">
+            <div class="payments-box1">
+              <h4>Invoices / Payments</h4>
+              <p id="invoiceCount">Loading...</p>
+            </div>
+
+            <div class="payments-box2">
+              <button class="btn btn-payment">
+                <i class="bi bi-printer"></i> Print Payments
+              </button>
+            </div>
+          </div>
+
+          <!-- payment tabs -->
+          <div class="payment-tabs mt-2">
+            <div class="payment-tabs-btn">
+              <button class="tab-btn active">Actions</button>
+              <button class="tab-btn">Only Paid</button>
+              <button class="tab-btn">Only Pending</button>
+            </div>
+          </div>
+
+          <!-- Payment Table -->
+          <div class="invoice-table mt-3">
+            <table class="table table-dark table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Invoice Summary</th>
+                  <th>Amount Paid</th>
+                  <th>Amount Owed</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="invoice-body"></tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    Total Paid: <span id="total-paid">$0.00</span>
+                  </td>
+                  <td>
+                    Total Owed: <span id="total-owed">$0.00</span>
+                  </td>
+                  <td colspan="1"></td>
+
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
